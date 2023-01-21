@@ -1,0 +1,29 @@
+@import "src/assets/styles/variables";
+
+.sidebar-wrapper {
+  z-index: 1;
+
+  .sidebar-menu {
+    height: calc(100% - 80px);
+  }
+
+  .sidebar-menu-item {
+
+    &:hover,
+    &.active {
+      color: $first-color;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: -moz-radial-gradient(right, ellipse cover, #ddd 0%, rgba(255, 255, 255, 0) 70%);
+      background: -webkit-radial-gradient(right, ellipse cover, #ddd 0%, rgba(255, 255, 255, 0) 70%);
+      background: radial-gradient(ellipse at right, #ddd 0%, rgba(255, 255, 255, 0) 70%);
+    }
+  }
+}

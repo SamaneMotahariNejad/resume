@@ -1,0 +1,15 @@
+.main-wrapper .page-wrapper {
+  padding: 6vh 8vh;
+
+  .page-content {
+    height: calc(100vh - 12vh);
+  }
+
+  .page-inner {
+    overflow: hidden;
+    left: 560px;
+    right: 0;
+    top: 15px;
+    bottom: 15px;
+  }
+}
