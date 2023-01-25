@@ -1,26 +1,38 @@
-<div class="sidebar-wrapper w--80 me--8 position-relative h-100">
-  <div
-    class="sidebar-menu-item h--80 mb--8 round-4 bg-white d-flex flex-column align-items-center justify-content-center pointer">
+<div class="sidebar-wrapper w--80 me--8 position-relative h-100 onHover">
+  <div *ngIf="deviceInfo.isDesktopDevice"
+    class="sidebar-menu-item onHover h--80 mb--8 round-4 bg-white d-flex flex-column align-items-center justify-content-center pointer">
     <i class="fa-solid fa-bars-staggered fs-25"></i>
   </div>
 
   <div class="sidebar-menu round-4 bg-white pt--10 pb--10">
-    <div [routerLink]="['about']" routerLinkActive="active"
-      class="sidebar-menu-item h--80 position-relative d-flex flex-column align-items-center justify-content-center fs-13 fw-500 pointer">
-      <i class="far fa-user fs-20 mb--5"></i>
+    <div [routerLink]="['about']" routerLinkActive="active" [ngClass]="deviceInfo.isDesktopDevice ? 'not-mobile' : ''"
+      class="sidebar-menu-item onHover h--80 position-relative d-flex flex-column align-items-center justify-content-center fs-13 fw-500 pointer">
+      <i class="far fa-user fs-20 mb--5 text-lightgray-color"></i>
       About
     </div>
 
-    <div [routerLink]="['experience']" routerLinkActive="active"
-      class="sidebar-menu-item h--80 position-relative d-flex flex-column align-items-center justify-content-center fs-13 fw-500 pointer">
-      <i class="far fa-list-alt fs-20 mb--5"></i>
+    <div [routerLink]="['experience']" routerLinkActive="active" [ngClass]="deviceInfo.isDesktopDevice ? 'not-mobile' : 'border-line-v'"
+      class="sidebar-menu-item onHover h--80 position-relative d-flex flex-column align-items-center justify-content-center fs-13 fw-500 pointer">
+      <i class="far fa-list-alt fs-20 mb--5 text-lightgray-color"></i>
       Experience
     </div>
 
-    <div [routerLink]="['education']" routerLinkActive="active"
-      class="sidebar-menu-item h--80 position-relative d-flex flex-column align-items-center justify-content-center fs-13 fw-500 pointer">
-      <i class="fa fa-university fs-20 mb--5"></i>
+    <div [routerLink]="['education']" routerLinkActive="active" [ngClass]="deviceInfo.isDesktopDevice ? 'not-mobile' : 'border-line-v'"
+      class="sidebar-menu-item onHover h--80 position-relative d-flex flex-column align-items-center justify-content-center fs-13 fw-500 pointer">
+      <i class="fa fa-university fs-20 mb--5 text-lightgray-color"></i>
       Education
+    </div>
+
+    <div [routerLink]="['works']" routerLinkActive="active" [ngClass]="deviceInfo.isDesktopDevice ? 'not-mobile' : 'border-line-v'"
+      class="sidebar-menu-item onHover h--80 position-relative d-flex flex-column align-items-center justify-content-center fs-13 fw-500 pointer">
+      <i class="fa fa-eye fs-20 mb--5 text-lightgray-color"></i>
+      Works
+    </div>
+
+    <div [routerLink]="['contact']" routerLinkActive="active" [ngClass]="deviceInfo.isDesktopDevice ? 'not-mobile' : 'border-line-v'"
+      class="sidebar-menu-item onHover h--80 position-relative d-flex flex-column align-items-center justify-content-center fs-13 fw-500 pointer">
+      <i class="fa fa-contact-card fs-20 mb--5 text-lightgray-color"></i>
+      Contact
     </div>
   </div>
 </div>

@@ -1,0 +1,32 @@
+@import "src/assets/styles/variables";
+
+.works-wrapper {
+  border-radius: 0 4px 4px 0;
+
+  li>span {
+    border: solid 1px $first-color;
+    color: $first-color;
+  }
+
+  .works-item {
+    .drag {
+      cursor: grabbing;
+    }
+
+    .chevron {
+      top: 100px;
+
+      &.fa-chevron-left {
+        left: 15px;
+      }
+
+      &.fa-chevron-right {
+        right: 15px;
+      }
+    }
+
+    img {
+      border: solid 1px $third-color;
+    }
+  }
+}

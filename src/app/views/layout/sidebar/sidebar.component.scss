@@ -12,9 +12,17 @@
     &:hover,
     &.active {
       color: $first-color;
+
+      i {
+        color: $first-color !important;
+      }
     }
 
-    &::before {
+    &.not-mobile:last-child:before {
+      display: none;
+    }
+
+    &.not-mobile &::before {
       content: '';
       position: absolute;
       left: 0;
@@ -24,6 +32,42 @@
       background: -moz-radial-gradient(right, ellipse cover, #ddd 0%, rgba(255, 255, 255, 0) 70%);
       background: -webkit-radial-gradient(right, ellipse cover, #ddd 0%, rgba(255, 255, 255, 0) 70%);
       background: radial-gradient(ellipse at right, #ddd 0%, rgba(255, 255, 255, 0) 70%);
+    }
+  }
+}
+
+::ng-deep {
+  .main-wrapper.mobile {
+    .sidebar-wrapper {
+      width: 100% !important;
+      margin: 0 !important;
+
+      .sidebar-menu {
+        height: 80px !important;
+        padding: 0 !important;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border-radius: 4px 4px 0 0 !important;
+        justify-content: space-between;
+
+        .sidebar-menu-item {
+          width: 100%;
+          padding: 0 10px;
+
+          &.border-line-v::before{
+            background: radial-gradient(ellipse at center, #ddd 0%, rgba(255, 255, 255, 0) 70%);
+            width: 2px;
+          }
+
+          i {
+            margin-bottom: 10px !important;
+          }
+        }
+      }
     }
   }
 }

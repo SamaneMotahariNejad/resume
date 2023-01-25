@@ -1,0 +1,75 @@
+<div class="works-wrapper scroll inner bg-white h-100 w-100 animate__animated animate__fadeInLeft">
+  <div class="works-content w-100 pe--30 ps--30 pt--30">
+    <div class="title position-relative fs-20 fw-700 d-flex align-items-baseline">
+      <span class="first-word text-first-color">W</span>
+      <span>orks</span>
+    </div>
+
+    <ul class="d-flex list-style-none m-0 p-0 mt--15 mb--20">
+      <li (click)="changeState('All')" class="pointer">
+        <span [ngClass]="{'bg-first-color text-white': state === 'All'}"
+          class="pe--8 ps--8 me--8 round-4 fs-14 wMin--50 h--22 d-flex align-items-center justify-content-center fw-500">
+          All
+        </span>
+      </li>
+
+      <li (click)="changeState('SRC Company')" class="pointer">
+        <span [ngClass]="{'bg-first-color text-white': state === 'SRC Company'}"
+          class="pe--8 ps--8 me--8 round-4 fs-14 wMin--50 h--22 d-flex align-items-center justify-content-center fw-500">
+          SRC Company
+        </span>
+      </li>
+
+      <li (click)="changeState('Ariosoren Company')" class="pointer">
+        <span [ngClass]="{'bg-first-color text-white': state === 'Ariosoren Company'}"
+          class="pe--8 ps--8 me--8 round-4 fs-14 wMin--50 h--22 d-flex align-items-center justify-content-center fw-500">
+          Ariosoren Company
+        </span>
+      </li>
+
+      <li (click)="changeState('Faranegar Company')" class="pointer">
+        <span [ngClass]="{'bg-first-color text-white': state === 'Faranegar Company'}"
+          class="pe--8 ps--8 me--8 round-4 fs-14 wMin--50 h--22 d-flex align-items-center justify-content-center fw-500">
+          Faranegar Company
+        </span>
+      </li>
+
+      <li (click)="changeState('Projects')" class="pointer">
+        <span [ngClass]="{'bg-first-color text-white': state === 'Projects'}"
+          class="pe--8 ps--8 me--8 round-4 fs-14 wMin--50 h--22 d-flex align-items-center justify-content-center fw-500">
+          Projects
+        </span>
+      </li>
+    </ul>
+
+    <div class="works-items d-flex flex-wrap">
+
+      <div *ngFor="let item of works" class="works-item animate__animated animate__fadeInLeftBig w-50 pe--30 mb--15">
+        <div class="hMin--200 box-shadow2 position-relative round-4 pt--8 pb--8">
+          <i (click)="changeCurrentPicture(item,'left')" [ngClass]="{'disabled': item.currentPicture <= 0}"
+            class="fa fa-chevron-left chevron position-absolute fs-20 text-first-color pointer"></i>
+
+          <div (click)="openLightGallery(item)" class="text-center mb--8 pointer">
+            <img height="200" class="animate__animated animate__fadeIn round-4 p--5"
+              src="{{item.path[item.currentPicture].src}}" />
+          </div>
+
+          <div class="d-flex drag me--8 ms--8 overflow-hidden" #elemt (mousedown)="startDragging($event, false, elemt)"
+            (mouseup)="stopDragging($event, false)" (mouseleave)="stopDragging($event, false)"
+            (mousemove)="moveEvent($event, elemt)">
+            <img *ngFor="let path of item.path; let index = index" class="me--8 round-4 p--5" height="60"
+              (click)="select(item,index)" src="{{path.src}}" />
+          </div>
+
+          <i (click)="changeCurrentPicture(item,'right')"
+            [ngClass]="{'disabled': item.currentPicture >= item.path.length - 1}"
+            class="fa fa-chevron-right chevron position-absolute fs-20 text-first-color pointer"></i>
+        </div>
+      </div>
+
+      <lightgallery [settings]="settings" [onInit]="onClick">
+        <div *ngFor="let item of lightGallerySlider"></div>
+      </lightgallery>
+
+    </div>
+  </div>

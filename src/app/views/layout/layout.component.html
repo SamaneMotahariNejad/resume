@@ -1,14 +1,17 @@
-<div class="main-wrapper">
+<div [class]="'main-wrapper '+ deviceDetect" [ngClass]="{'mobile': !deviceInfo.isDesktopDevice}" (mouseenter)="enter()"
+  (mousemove)="move($event)" (window:scroll)="onScroll($event)" (mouseleave)="leave()">
   <div class="page-wrapper hvMin-100">
 
     <div class="page-content animate__animated animate__fadeIn w-100 d-flex position-relative">
-      <app-sidebar></app-sidebar>
+      <app-sidebar [deviceInfo]="deviceInfo"></app-sidebar>
       <app-main-content></app-main-content>
 
       <div class="page-inner position-absolute">
-        <router-outlet></router-outlet>
+        <!-- <router-outlet></router-outlet> -->
       </div>
     </div>
 
   </div>
+
+  <div class="sites-circle" [ngClass]="mouseMove ? 'onMove' : 'notMove'"></div>
 </div>

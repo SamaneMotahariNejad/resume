@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { DeviceInformation } from 'src/app/core/interfaces/deviceinfo';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-
+  @Input() deviceInfo: DeviceInformation = {
+    browser: '',
+    isDesktopDevice: false,
+    isMobile: false,
+    isTablet: false
+  };;
 }

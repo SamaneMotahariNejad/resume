@@ -4,6 +4,9 @@ import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
+import { WorksComponent } from './works/works.component';
+import { ContactComponent } from './contact/contact.component';
+import { LightgalleryModule } from 'lightgallery/angular';
 
 const routes: Routes = [
   {
@@ -23,16 +26,34 @@ const routes: Routes = [
     path: 'education',
     component: EducationComponent
   },
+  {
+    path: 'works',
+    component: WorksComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
 ];
 
 @NgModule({
   declarations: [
     AboutComponent,
     ExperienceComponent,
-    EducationComponent
+    EducationComponent,
+    WorksComponent,
+    ContactComponent
+  ],
+  exports: [
+    AboutComponent,
+    ExperienceComponent,
+    EducationComponent,
+    WorksComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
+    LightgalleryModule,
     RouterModule.forChild(routes)
   ]
 })
