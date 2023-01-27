@@ -6,8 +6,12 @@
       <app-sidebar [deviceInfo]="deviceInfo"></app-sidebar>
       <app-main-content></app-main-content>
 
-      <div class="page-inner position-absolute">
-        <!-- <router-outlet></router-outlet> -->
+      <div *ngIf="loading && !deviceInfo.isDesktopDevice" class="loading-wrapper position-relative">
+        <app-loading [isLoading]="loading"></app-loading>
+      </div>
+
+      <div *ngIf="!loading" class="page-inner position-absolute">
+        <router-outlet></router-outlet>
       </div>
     </div>
 

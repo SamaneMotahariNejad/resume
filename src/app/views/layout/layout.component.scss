@@ -36,7 +36,7 @@
 
     .page-inner {
       overflow: hidden;
-      left: 560px;
+      left: 568px;
       right: 0;
       top: 15px;
       bottom: 15px;
@@ -48,8 +48,13 @@
 .main-wrapper.mobile {
   .page-content {
     flex-direction: column;
-    padding: 1.5vh;
-    min-height: 100vh;
+    padding: 1.5vh 1.5vh 80px;
+    margin-bottom: 1.5vh;
+    min-height: calc(100vh - 1.5vh);
+
+    .loading-wrapper {
+      height: calc(100vh - 318px);
+    }
 
     .page-inner {
       position: inherit !important;

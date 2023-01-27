@@ -322,3 +322,16 @@ $i: 0;
   pointer-events: none;
   color: $third-color !important;
 }
+
+ul.custom {
+  list-style: none;
+
+  li::before {
+    content: "•";
+    color: #78cc6d;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 0.5em 0 -1em;
+    font-size: 18px;
+  }
+}

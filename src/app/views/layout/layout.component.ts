@@ -10,6 +10,7 @@ import { SettingService } from 'src/app/core/services/setting.service';
 export class LayoutComponent {
   name = 'Angular';
   mouseMove = false;
+  loading = false;
   lastPosition = {
     x: 0,
     y: 0,
@@ -36,6 +37,14 @@ export class LayoutComponent {
       const { type } = screen.orientation;
       this.deviceDetect = type.startsWith("portrait") ? "portrait" : "landscape";
     }, false);
+
+    if(!this.deviceInfo.isDesktopDevice){
+      this.loading = true;
+
+      setTimeout(() => {
+        this.loading = false;
+      }, 500);
+    }
   }
 
   getDeviceInformation() {

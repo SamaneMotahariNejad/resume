@@ -1,7 +1,13 @@
+@import "src/assets/styles/variables";
+
 .education-wrapper {
   border-radius: 0 4px 4px 0;
 
-  .date {
-    border: 1px solid #ddd;
+  .title.first:after {
+    background: #ddd !important;
+  }
+
+  .date span {
+    border: 1px solid $first-color;
   }
 }

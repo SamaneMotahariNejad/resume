@@ -90,6 +90,7 @@
       .main-content {
         padding: 8px 8px 100px 8px;
         display: flex;
+        margin-bottom: 10px;
 
         .main-content-picture {
           border-radius: 100%;
@@ -125,9 +126,12 @@
 
         .main-content-link {
           min-height: 55px !important;
-          max-height: 55px !important;
           right: 0;
           left: 0;
+
+          >div {
+            min-height: 55px !important;
+          }
         }
       }
     }

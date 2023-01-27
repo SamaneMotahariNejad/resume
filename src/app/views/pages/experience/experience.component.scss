@@ -1,9 +1,21 @@
+@import "src/assets/styles/variables";
+
 .experience-wrapper {
   border-radius: 0 4px 4px 0;
 
   .experience-items {
     &.border-line-v:before {
       left: 50% !important
+    }
+
+    .experience-item{
+      &:nth-child(even){
+        padding-left: 30px !important;
+      }
+
+      &:nth-child(odd){
+        padding-right: 30px !important;
+      }
     }
 
     .experience-item:before {
@@ -17,7 +29,7 @@
     }
   }
 
-  .date {
-    border: 1px solid #ddd;
+  .date span {
+    border: 1px solid $first-color;
   }
 }

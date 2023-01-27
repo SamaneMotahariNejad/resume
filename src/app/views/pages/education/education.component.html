@@ -1,39 +1,42 @@
-<div class="education-wrapper scroll inner bg-white h-100 w-100 animate__animated animate__fadeInLeft">
-  <div class="education-content w-100 pe--30 ps--30 pt--30">
-    <div class="title position-relative fs-20 fw-700 d-flex align-items-baseline">
+<div
+  class="education-wrapper position-relative scroll inner bg-white h-100 w-100 animate__animated animate__fadeInLeft d-flex">
+  <div class="education-content w-50 ps--30 pt--30">
+    <div class="title first position-relative fs-20 fw-700 d-flex align-items-baseline">
       <span class="first-word text-first-color">E</span>
       <span>ducation</span>
     </div>
 
     <div class="education-items pt--30">
-
-      <div class="education-item position-relative mb--20">
-        <div class="date text-lightgray-color fs-13 wMax--110 wMin--110 hMin--20 pe--8 ps--8 mb--15">Date - Date</div>
-        <div class="role text-darkgray-color fs-14 fw-bold mb--5">Role Name</div>
-        <div class="company-name fs-13 text-lightgray-color mb--8">Company Name</div>
-
-        <div>
-          <p class="fs-14 text-lightgray-color text-justify">
-            Collaborate with creative and development teams on the execution of ideas.
-            Collaborate with creative and development teams on the execution of ideas.
-          </p>
+      <div *ngFor="let item of education" class="education-item position-relative mb--20">
+        <div class="date text-lightgray-color fs-13 hMin--20 mb--15">
+          <span class="pe--8 ps--8 round-4">
+            {{item.startDate}} - {{item.endDate}}
+          </span>
         </div>
+        <div class="company-name fs-14 fw-bold mb--5">{{item.degreeName}}</div>
+        <div class="role text-darkgray-color fs-14 mb--5">{{item.universityName}}</div>
       </div>
-
-      <div class="education-item position-relative mb--20">
-        <div class="date text-lightgray-color fs-13 wMax--110 wMin--110 hMin--20 pe--8 ps--8 mb--15">Date - Date</div>
-        <div class="role text-darkgray-color fs-14 fw-bold mb--5">Role Name</div>
-        <div class="company-name fs-13 text-lightgray-color mb--8">Company Name</div>
-
-        <div>
-          <p class="fs-14 text-lightgray-color text-justify">
-            Collaborate with creative and development teams on the execution of ideas.
-            Collaborate with creative and development teams on the execution of ideas.
-          </p>
-        </div>
-      </div>
-
     </div>
 
+  </div>
+
+  <div class="certification-content w-50 pt--30">
+    <div class="title position-relative fs-20 fw-700 d-flex align-items-baseline">
+      <span class="first-word text-first-color">C</span>
+      <span>ertification</span>
+    </div>
+
+    <div class="certification-items hMin--300 border-line-v position-relative pt--30">
+      <ul class="custom">
+        <li class="fs-13 text-lightgray-color text-justify" *ngFor="let item of certification">
+          {{item.certificationName}}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="position-absolute bottom-0 w-100">
+    <img class="w-100" src="./assets/images/education/education.png" />
   </div>
 </div>

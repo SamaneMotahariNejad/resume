@@ -5,31 +5,25 @@
       <span>xperience</span>
     </div>
 
-    <div class="experience-items d-flex border-line-v position-relative pt--30 flex-wrap">
+    <div class="experience-items d-flex border-line-v position-relative flex-wrap">
 
-      <div class="experience-item position-relative w-50 pe--30">
-        <div class="date text-lightgray-color fs-13 wMax--110 wMin--110 hMin--20 pe--8 ps--8 mb--15">Date - Date</div>
-        <div class="role text-darkgray-color fs-14 fw-bold mb--5">Role Name</div>
-        <div class="company-name fs-13 text-lightgray-color mb--8">Company Name</div>
-
-        <div>
-          <p class="fs-14 text-lightgray-color text-justify">
-            Collaborate with creative and development teams on the execution of ideas.
-            Collaborate with creative and development teams on the execution of ideas.
-          </p>
+      <div *ngFor="let item of experience" class="experience-item position-relative w-50 pt--30">
+        <div class="date text-lightgray-color fs-13 hMin--20 mb--15">
+          <span class="pe--8 ps--8 round-4">
+            {{item.startDate}} - {{item.endDate}}
+          </span>
         </div>
-      </div>
-
-      <div class="experience-item position-relative w-50 ps--30">
-        <div class="date text-lightgray-color fs-13 wMax--110 wMin--110 hMin--20 pe--8 ps--8 mb--15">Date - Date</div>
-        <div class="role text-darkgray-color fs-14 fw-bold mb--5">Role Name</div>
-        <div class="company-name fs-13 text-lightgray-color mb--8">Company Name</div>
+        <div class="role text-darkgray-color fs-14 fw-bold mb--5">{{item.roleName}}</div>
+        <div class="company-name fs-14 text-first-color fw-bold mb--8">{{item.companyName}}</div>
 
         <div>
-          <p class="fs-14 text-lightgray-color text-justify">
-            Collaborate with creative and development teams on the execution of ideas.
-            Collaborate with creative and development teams on the execution of ideas.
+          <p class="fs-12 text-lightgray-color text-justify mb--5">
+            {{item.summery}}
           </p>
+
+          <ul class="custom">
+            <li class="fs-12 text-lightgray-color text-justify" *ngFor="let detail of item.details">{{detail}}</li>
+          </ul>
         </div>
       </div>
 

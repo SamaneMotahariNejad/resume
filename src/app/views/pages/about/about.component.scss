@@ -1,15 +1,58 @@
 .about-wrapper {
   border-radius: 0 4px 4px 0;
 
-  li{
+  li {
     &::before {
       content: '';
-      background: radial-gradient(ellipse at center,#ddd 0%,rgba(255,255,255,0) 70%);
+      background: radial-gradient(ellipse at center, #ddd 0%, rgba(255, 255, 255, 0) 70%);
       position: absolute;
       left: 0;
       bottom: 0;
       width: 100%;
       height: 1px;
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+  }
+
+
+
+  .skill-items>div {
+    width: 33%;
+    white-space: nowrap;
+
+
+  }
+}
+
+::ng-deep {
+  .main-wrapper.mobile {
+    .about-wrapper {
+      border-radius: 4px;
+
+      .about-content {
+        flex-direction: column;
+
+        >div {
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+
+      .languages-wrapper {
+        width: auto;
+      }
+
+      .skill-items>div {
+        width: 50% !important;
+
+        &:nth-child(even) {
+          padding-left: 15px;
+        }
+      }
     }
   }
 }
