@@ -11,3 +11,39 @@
     border: 1px solid $first-color;
   }
 }
+
+
+::ng-deep {
+  .main-wrapper.mobile {
+    .education-wrapper {
+      border-radius: 4px;
+      overflow: hidden;
+      flex-direction: column;
+
+      .education-content,
+      .certification-content {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+
+        .border-line-v::before {
+          display: none;
+        }
+      }
+
+      .education-content {
+        .education-items .education-item {
+          width: 100% !important;
+
+          &:nth-child(odd) {
+            padding-right: 0px !important;
+          }
+
+          &:nth-child(even) {
+            padding-left: 0px !important;
+          }
+        }
+      }
+    }
+  }
+}

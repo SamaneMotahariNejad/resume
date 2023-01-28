@@ -5,6 +5,10 @@
     .main-content-picture {
       left: 0;
       height: 57%;
+      background-image: url('../../../../assets/images/profile.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
 
       img {
         border-radius: 4px 4px 0 0;

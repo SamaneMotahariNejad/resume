@@ -8,12 +8,12 @@
       left: 50% !important
     }
 
-    .experience-item{
-      &:nth-child(even){
+    .experience-item {
+      &:nth-child(even) {
         padding-left: 30px !important;
       }
 
-      &:nth-child(odd){
+      &:nth-child(odd) {
         padding-right: 30px !important;
       }
     }
@@ -31,5 +31,32 @@
 
   .date span {
     border: 1px solid $first-color;
+  }
+}
+
+
+::ng-deep {
+  .main-wrapper.mobile {
+    .experience-wrapper {
+      border-radius: 4px;
+      overflow: hidden;
+
+      .experience-content {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+
+        .experience-items .experience-item {
+          width: 100% !important;
+
+          &:nth-child(odd) {
+            padding-right: 0px !important;
+          }
+
+          &:nth-child(even) {
+            padding-left: 0px !important;
+          }
+        }
+      }
+    }
   }
 }

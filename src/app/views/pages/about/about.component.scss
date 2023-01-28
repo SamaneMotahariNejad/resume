@@ -17,13 +17,9 @@
     }
   }
 
-
-
   .skill-items>div {
     width: 33%;
     white-space: nowrap;
-
-
   }
 }
 
@@ -31,19 +27,34 @@
   .main-wrapper.mobile {
     .about-wrapper {
       border-radius: 4px;
+      overflow: hidden;
 
-      .about-content {
-        flex-direction: column;
+      >div {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
 
-        >div {
-          width: 100% !important;
-          padding-left: 0 !important;
-          padding-right: 0 !important;
+        .about-content {
+          flex-direction: column;
+
+          .border-line-v::before {
+            display: none;
+          }
+
+          >div {
+            width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
         }
       }
 
       .languages-wrapper {
-        width: auto;
+        width: auto !important;
+      }
+
+      .skill-content {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
       }
 
       .skill-items>div {

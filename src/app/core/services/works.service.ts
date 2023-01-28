@@ -17,45 +17,45 @@ export class WorksService {
         path: [
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin0.jpg',
+            src: './assets/images/works/wecare/1.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin0.jpg'
+            thumb: './assets/images/works/wecare/1.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin1.jpg',
+            src: './assets/images/works/wecare/2.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin1.jpg'
+            thumb: './assets/images/works/wecare/2.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin2.jpg',
+            src: './assets/images/works/wecare/3.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin2.jpg'
+            thumb: './assets/images/works/wecare/3.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin3.jpg',
+            src: './assets/images/works/wecare/4.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin3.jpg'
+            thumb: './assets/images/works/wecare/4.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin4.jpg',
+            src: './assets/images/works/wecare/5.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin4.jpg'
+            thumb: './assets/images/works/wecare/5.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin5.jpg',
+            src: './assets/images/works/wecare/6.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin5.jpg'
+            thumb: './assets/images/works/wecare/6.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin6.jpg',
+            src: './assets/images/works/wecare/7.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin6.jpg'
+            thumb: './assets/images/works/wecare/7.png'
           }
         ]
       },
@@ -67,45 +67,53 @@ export class WorksService {
         path: [
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin0.jpg',
+            src: './assets/images/works/nursedaisy/1.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin0.jpg'
+            thumb: './assets/images/works/nursedaisy/1.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin1.jpg',
+            src: './assets/images/works/nursedaisy/2.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin1.jpg'
+            thumb: './assets/images/works/nursedaisy/2.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin2.jpg',
+            src: './assets/images/works/nursedaisy/3.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin2.jpg'
+            thumb: './assets/images/works/nursedaisy/3.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin3.jpg',
+            src: './assets/images/works/nursedaisy/4.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin3.jpg'
+            thumb: './assets/images/works/nursedaisy/4.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin4.jpg',
+            src: './assets/images/works/nursedaisy/5.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin4.jpg'
+            thumb: './assets/images/works/nursedaisy/5.png'
           },
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin5.jpg',
+            src: './assets/images/works/nursedaisy/6.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin5.jpg'
-          },
+            thumb: './assets/images/works/nursedaisy/6.png'
+          }
+          ,
           {
             alt: '',
-            src: './assets/images/works/darwin/darwin6.jpg',
+            src: './assets/images/works/nursedaisy/7.png',
             subHtml: '',
-            thumb: './assets/images/works/darwin/darwin6.jpg'
+            thumb: './assets/images/works/nursedaisy/7.png'
+          }
+          ,
+          {
+            alt: '',
+            src: './assets/images/works/nursedaisy/8.png',
+            subHtml: '',
+            thumb: './assets/images/works/nursedaisy/8.png'
           }
         ]
       },

@@ -27,6 +27,36 @@
 
     img {
       border: solid 1px $third-color;
+      background-color: rgba($first-color, $alpha: 0.2);
+    }
+  }
+}
+
+
+
+::ng-deep {
+  .main-wrapper.mobile {
+    .works-wrapper {
+      border-radius: 4px;
+      overflow: hidden;
+
+      .works-content {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+
+        ul {
+          flex-wrap: wrap;
+
+          >li {
+            margin-bottom: 8px;
+          }
+        }
+
+        .works-items .works-item {
+          width: 100% !important;
+          padding-right: 0px !important;
+        }
+      }
     }
   }
 }
